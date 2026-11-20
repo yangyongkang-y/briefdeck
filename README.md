@@ -2,16 +2,19 @@
 
 将主题与工作材料变成可编辑的汇报 PPT。先确认大纲，再分批生成内容；预览、修改、下载后继续在 PowerPoint 或 WPS 中编辑。
 
-**交付状态：应用已实现，本地和模拟宿主验证已完成；Anna staging 真实模型测试、账号额度核验、审核上架尚待账号登录完成；GitHub 远程仓库已发布。不能将本地 mock 测试视为真实平台测试。**
+**交付状态：GitHub 源码已公开；Anna staging App 已创建，0.1.0 已提交审核（`pending_review`，尚未公开上架）。已通过官方 CLI 连接 staging 完成真实模型、APS、文件往返与跨域上传验证；平台浏览器下载对话框和独立账号体验仍待验收。**
 
 | 信息 | 当前值 |
 | --- | --- |
-| App name | BriefDeck｜简报工坊（拟提交） |
-| slug | `briefdeck`（待平台创建确认） |
+| App name | BriefDeck｜简报工坊 |
+| slug | `briefdeck` |
+| 完整标识 | `@yangyongkang-y/briefdeck` |
+| App ID | `289` |
+| 审核候选 | `0.1.0`（version ID `706`，bundle ID `646`） |
 | 版本 | `0.1.0` |
 | 平台 | https://staging.anna.partners |
 | GitHub | https://github.com/yangyongkang-y/briefdeck |
-| 开发测试实际 CU | 尚无真实模型请求；账号余额未核验 |
+| 开发测试实际 CU | 15 次真实请求，共约 7.56 CU；余额 992.44 CU |
 
 ![BriefDeck 编辑器（可编辑演示样例）](docs/screenshots/editor.png)
 
@@ -52,7 +55,8 @@ npm run anna:validate   # Anna schema 与 Host API 静态检查
 npx anna-app doctor
 npx anna-app login --host https://staging.anna.partners
 npx anna-app whoami
-npx anna-app account set-handle your-dev-handle --host https://staging.anna.partners
+# 仅账号尚无 handle 时设置；替换为自己的标识，已有 handle 不要重复更改。
+# npx anna-app account set-handle your-dev-handle --host https://staging.anna.partners
 npm run build
 npm run anna:dev
 ```
@@ -73,10 +77,23 @@ npm run anna:real
 2. 真实生成大纲、生成页面、改写一页，核对用量。
 3. 关闭并重开窗口，确认 APS 保存和恢复。
 4. 生成 PPTX，确认平台文件上传及宿主下载。
-5. 从上传返回的 `put_url` 确定对象存储 origin，将精确 HTTPS origin 加入 `manifest.json` 的 `ui.bundle.external_origins`，重新构建上传。当前列表为空，不能假定 staging 文件 PUT 的 CSP 已经配置完成。
+5. 从上传返回的 `put_url` 确定对象存储 origin，将精确 HTTPS origin 加入 `manifest.json` 的 `ui.bundle.external_origins`，重新构建上传。该 origin 已完成配置；实际 OPTIONS 与 PUT 均验证允许 staging origin。
 6. 通过独立账号验证安装、生成、下载与数据隔离。
 
 具体发布步骤见 [docs/release.md](docs/release.md)。
+
+## 真实测试结果
+
+- 中文 8 页：生成、单页改写、APS 恢复、PPTX 上传和下载签名均通过。
+- 英文 6 页：包含原生柱状图，42% / 68% 演示数据与引用一致。
+- 10,000 字符材料生成 12 页：成功生成、保存和导出，无布局警告。
+- 20 项核心测试、3 项浏览器测试通过；官方 CLI 严格校验通过。
+- 15 次实际模型调用（包括一次失败的大纲尝试和一次格式修复）均记录在 [额度 CSV](docs/credit-usage.csv)。初始 1000 CU，余额 992.44 CU。
+- [真实中文 PPTX](examples/BriefDeck-Anna-real.pptx) · [真实英文图表 PPTX](examples/BriefDeck-Anna-english-chart.pptx) · [真实 12 页 PPTX](examples/BriefDeck-Anna-max12.pptx)
+
+这些请求实际经过 Anna staging 服务，使用平台模型 `xiaomi/mimo-v2.5`。浏览器对话框与其他账号安装不包含在服务端往返测试的结论中。
+
+![真实 AI 生成的英文原生图表导出效果](docs/screenshots/real-english-chart.png)
 
 ## 产品与工程
 

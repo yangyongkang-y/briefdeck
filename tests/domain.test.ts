@@ -5,6 +5,7 @@ import {
   ProjectSchema,
   SlideSchema,
   groundedSlide,
+  fitGeneratedLayout,
   materialSources,
   parseModelJson,
   sampleMaterial,
@@ -24,6 +25,17 @@ describe("内容与模型边界", () => {
     const project = ProjectSchema.parse(sampleProject());
     expect(new Set(project.slides.map((s) => s.layout)).size).toBe(6);
     expect(project.slides).toHaveLength(8);
+  });
+  it("AI 核心结论页过长时转换为列表，保留全部内容", () => {
+    const original = {
+      ...sampleProject().slides[1],
+      body: ["一", "二", "三", "四"],
+    };
+    const result = fitGeneratedLayout(original);
+    expect(result.layout).toBe("bullets");
+    expect(result.body).toEqual(original.body);
+    expect(result.id).toBe(original.id);
+    expect(layoutWarnings(result, "ocean")).toEqual([]);
   });
   it("给非空材料段落稳定分配引用", () => {
     expect(materialSources("a\n\nb\n c")).toEqual([
@@ -133,6 +145,38 @@ describe("内容与模型边界", () => {
     );
     expect(sources.length).toBeLessThanOrEqual(100);
     expect(sources.map((s) => s.text).join("\n")).toContain("第205段");
+  });
+  it("模型大纲重复内部 ID 时，由应用按页序分配稳定 ID", async () => {
+    const project = sampleProject();
+    const ai = new AI({
+      llm: {
+        complete: async () => ({
+          model: "mock",
+          stopReason: "endTurn",
+          content: {
+            text: JSON.stringify({
+              slides: project.outline.map((slide) => ({ ...slide, id: "s1" })),
+            }),
+          },
+          _meta: { quotaConsumed: 0 },
+        }),
+      },
+      storage: { set: async () => ({}) },
+    });
+    const outline = await ai.outline(project.brief);
+    expect(outline.map((slide) => slide.id)).toEqual([
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5",
+      "s6",
+      "s7",
+      "s8",
+    ]);
+    expect(outline.map((slide) => slide.title)).toEqual(
+      project.outline.map((slide) => slide.title),
+    );
   });
 });
 

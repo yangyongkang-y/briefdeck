@@ -182,7 +182,17 @@ export function validateSources(ids: string[], material: string) {
   if (ids.some((s) => !allowed.has(s)))
     throw new Error("生成内容引用了不存在的材料段落。");
 }
+export function fitGeneratedLayout(slide: Slide): Slide {
+  if (
+    (slide.layout === "big-point" && slide.body.length > 3) ||
+    (slide.layout === "timeline" && slide.body.length > 5)
+  ) {
+    return { ...slide, layout: "bullets" };
+  }
+  return slide;
+}
 export function groundedSlide(slide: Slide, material: string): Slide {
+  slide = fitGeneratedLayout(slide);
   validateSources(slide.sourceIds, material);
   if (!slide.chart) return slide;
   const cited = materialSources(material)

@@ -23,7 +23,7 @@ flowchart LR
 
 ## AI 调用
 
-大纲一次（上限 2200 tokens），正文每批最多三页（3000），单页改写（1800）。关闭可关闭的 thinking。输出必须通过 JSON 与 schema 校验；截断、缺页、错序、重复 ID 不能静默通过。
+大纲一次（上限 2200 tokens），正文每批最多三页（3000），单页改写（1800）。关闭可关闭的 thinking。输出必须通过 JSON 与 schema 校验；截断、缺页与批次错序不能静默通过。新大纲的内部页面 ID 由应用按顺序分配，避免依赖模型生成唯一标识。
 
 材料按段分配 R1…Rn；超过一百行时合并成最多一百组，保留所有材料文字。图表数字必须存在于对应引用段落中；不符合时转换为「数据待核实」页面。这个约束不证明数字与标签的语义对应，用户仍需核验。
 
@@ -41,7 +41,7 @@ flowchart LR
 
 统一 1280×720 设计坐标，转换为 13.333×7.5 英寸。文本、形状、图表分别生成原生对象；讲稿写入 notes，不将整页截图作为 PPT 内容。
 
-Anna 内使用 `files.upload_init → PUT → upload_finalize → files.download`。平台宿主处理下载。精确对象存储 origin 需要在首次 staging 实测后加入 CSP，当前未完成此配置。
+Anna 内使用 `files.upload_init → PUT → upload_finalize → files.download`。平台宿主处理下载。已将首次 staging 实测返回的精确对象存储 origin 加入 CSP，并用实际 OPTIONS 与带 Origin 的 PUT 验证跨域允许。
 
 独立浏览器使用 Blob 下载。项目 JSON 备份目前走浏览器下载，Anna iframe 是否允许此辅助备份通道仍需实测；PPTX 主通道使用平台宿主下载。
 
@@ -49,4 +49,4 @@ Anna 内使用 `files.upload_init → PUT → upload_finalize → files.download
 
 ## 当前环境限制
 
-模型、下载、账号隔离必须在真实 staging 中验收。模拟宿主验证的是 SDK 桥与应用编排，不验证 Anna 服务端、模型供应商、CU 账单或平台审核。
+真实 staging 服务已验证模型、CU、APS 和文件往返；模拟宿主验证 SDK 与应用编排。平台浏览器下载对话框、独立账号隔离与审核后公开安装仍待验收。

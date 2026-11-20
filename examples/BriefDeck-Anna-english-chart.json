@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "id": "56ce17a2-5ed0-471f-a8d9-0cf8bc117b4e",
+  "revision": 2,
+  "title": "Onboarding proposal: show a bar chart comparing the supplied completion rates",
+  "brief": {
+    "topic": "Onboarding proposal: show a bar chart comparing the supplied completion rates",
+    "audience": "团队与主管",
+    "purpose": "项目提案",
+    "language": "en",
+    "pageCount": 6,
+    "material": "Background: new users struggle to find the core feature.\nGoal: let users experience product value before completing profile information.\nIllustrative dataset only: Legacy completion rate 42%; Pilot completion rate 68%. These are demo figures, not actual business statistics.\nPlan: week one research, week two prototype, week three pilot, week four evaluation.\nDecision requested: approve the direction and pilot scope.",
+    "theme": "ocean"
+  },
+  "outline": [
+    {
+      "id": "s1",
+      "title": "New Onboarding: Value Before Profile",
+      "purpose": "Open the proposal and frame the problem",
+      "layout": "cover",
+      "sourceIds": [
+        "R1"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Users Struggle to Find the Core Feature",
+      "purpose": "State the core user problem",
+      "layout": "big-point",
+      "sourceIds": [
+        "R1"
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Show Product Value Before Profile Setup",
+      "purpose": "Present the proposed direction",
+      "layout": "bullets",
+      "sourceIds": [
+        "R2"
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Illustrative Completion Rates: 42% vs 68%",
+      "purpose": "Compare supplied demo completion rates",
+      "layout": "chart",
+      "sourceIds": [
+        "R3"
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Four-Week Plan: Research to Evaluation",
+      "purpose": "Outline the execution timeline",
+      "layout": "timeline",
+      "sourceIds": [
+        "R4"
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "Decision: Approve Direction and Pilot Scope",
+      "purpose": "Close with the requested decision",
+      "layout": "bullets",
+      "sourceIds": [
+        "R5"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "s1",
+      "layout": "cover",
+      "title": "New Onboarding: Value Before Profile",
+      "subtitle": "A proposal to let users experience value first",
+      "body": [
+        "Framing the onboarding problem for team and leads"
+      ],
+      "notes": "This proposal opens with a clear problem: new users struggle to find the core feature. We will frame why onboarding order matters, then present a direction, illustrative comparison, plan, and the decision we are asking for.",
+      "sourceIds": [
+        "R1"
+      ],
+      "locked": false
+    },
+    {
+      "id": "s2",
+      "layout": "big-point",
+      "title": "Users Struggle to Find the Core Feature",
+      "subtitle": "The core user problem",
+      "body": [
+        "New users struggle to locate the core feature",
+        "This friction undermines early engagement",
+        "We must reduce time-to-value in onboarding"
+      ],
+      "notes": "The background is straightforward: new users struggle to find the core feature. This friction slows early engagement and risks drop-off before users ever see what the product can do for them.",
+      "sourceIds": [
+        "R1"
+      ],
+      "locked": false
+    },
+    {
+      "id": "s3",
+      "layout": "bullets",
+      "title": "Show Product Value Before Profile Setup",
+      "subtitle": "Proposed direction",
+      "body": [
+        "Let users experience product value first",
+        "Defer profile information until after value is clear",
+        "Reduce setup friction at the start of onboarding",
+        "Align onboarding flow with the core feature"
+      ],
+      "notes": "The goal is to let users experience product value before completing profile information. By deferring profile setup, we reduce initial friction and guide users toward the core feature sooner.",
+      "sourceIds": [
+        "R2"
+      ],
+      "locked": false
+    },
+    {
+      "id": "s4",
+      "layout": "chart",
+      "title": "Illustrative Completion Rates: 42% vs 68%",
+      "subtitle": "Demo figures only, not actual business statistics",
+      "body": [
+        "Legacy flow completion: 42%",
+        "Pilot flow completion: 68%",
+        "Illustrative dataset for direction comparison",
+        "Not a substitute for real business metrics"
+      ],
+      "notes": "These figures come from an illustrative dataset only. The legacy flow shows a 42% completion rate, while the pilot flow shows 68%. They are demo figures, not actual business statistics, and should be treated as directional evidence for the proposal rather than a performance claim. The gap suggests the proposed direction is worth piloting and measuring with real data.",
+      "sourceIds": [
+        "R3"
+      ],
+      "locked": false,
+      "chart": {
+        "type": "bar",
+        "labels": [
+          "Legacy",
+          "Pilot"
+        ],
+        "series": [
+          {
+            "name": "Completion Rate",
+            "values": [
+              42,
+              68
+            ]
+          }
+        ],
+        "unit": "%"
+      }
+    },
+    {
+      "id": "s5",
+      "layout": "timeline",
+      "title": "Four-Week Plan: Research to Evaluation",
+      "subtitle": "A tight four-week cycle from insight to decision",
+      "body": [
+        "Week 1｜Research: map user friction and core-feature discovery",
+        "Week 2｜Prototype: build value-first onboarding flow",
+        "Week 3｜Pilot: run with a limited user cohort",
+        "Week 4｜Evaluation: review results and recommend next step"
+      ],
+      "notes": "The plan runs over four weeks. Week one focuses on research to understand where users struggle. Week two builds a prototype of the value-first flow. Week three runs a limited pilot, and week four evaluates results to inform the go-forward decision. This keeps the proposal scoped, fast, and measurable.",
+      "sourceIds": [
+        "R4"
+      ],
+      "locked": false
+    },
+    {
+      "id": "s6",
+      "layout": "bullets",
+      "title": "Decision: Approve Direction and Pilot Scope",
+      "subtitle": "What we need from leadership today",
+      "body": [
+        "Approve the value-before-profile direction",
+        "Confirm pilot scope and target cohort",
+        "Align on four-week timeline and checkpoints",
+        "Agree success criteria before kickoff"
+      ],
+      "notes": "We are asking for two decisions today: approval of the value-before-profile direction, and confirmation of the pilot scope. Once approved, we will align on the four-week timeline and agree on success criteria before kickoff. This keeps the team focused and gives leadership a clear checkpoint at the end of the pilot.",
+      "sourceIds": [
+        "R5"
+      ],
+      "locked": false
+    }
+  ],
+  "status": "ready",
+  "createdAt": "2026-11-20T10:01:57.086Z",
+  "updatedAt": "2026-11-20T10:01:57.086Z",
+  "demo": false
+}

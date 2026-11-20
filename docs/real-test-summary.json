@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-20T10:01:45.506Z",
+  "platform": "Anna staging",
+  "app_id": 289,
+  "app_ref": "@yangyongkang-y/briefdeck",
+  "initialCU": 1000,
+  "remainingCU": 992.44,
+  "reportedConsumedCU": 7.556034482758619,
+  "modelRequests": 15,
+  "unknownCosts": 0,
+  "scenarios": [
+    {
+      "name": "zh8",
+      "pages": 8,
+      "singleSlideRewrite": true,
+      "layoutWarnings": []
+    },
+    {
+      "name": "english-chart",
+      "pages": 6,
+      "inputCharacters": 418,
+      "nativeCharts": 1,
+      "warnings": []
+    },
+    {
+      "name": "max12",
+      "pages": 12,
+      "inputCharacters": 10000,
+      "nativeCharts": 0,
+      "warnings": []
+    }
+  ],
+  "verified": {
+    "catalog": true,
+    "storageRoundtrip": true,
+    "fileRoundtrip": true,
+    "projectRestore": true,
+    "singleSlideRewrite": true,
+    "pptxUploadedAndPresigned": true
+  },
+  "browserUIStatus": "Pending manual platform UI verification; these are real service calls through the official CLI harness.",
+  "cors": {
+    "at": "2026-11-20T10:08:26.264Z",
+    "status": 204,
+    "allowOrigin": "https://staging.anna.partners",
+    "allowMethods": "GET, PUT, HEAD",
+    "allowHeaders": "Content-Type",
+    "putStatus": 200,
+    "putAllowOrigin": "https://staging.anna.partners"
+  }
+}

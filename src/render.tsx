@@ -193,14 +193,15 @@ export function layoutSlide(
     text(slide.title, 64, 150, 1150, 126, 44, t.fg, true);
     if (slide.layout === "big-point") {
       rect(64, 305, 7, 228, t.accent, 3);
+      const row = Math.min(88, 310 / Math.max(1, slide.body.length));
       slide.body.forEach((b, i) =>
         text(
           b,
           102,
-          315 + i * 88,
+          315 + i * row,
           1080,
-          84,
-          i ? 28 : 38,
+          row - 4,
+          slide.body.length > 3 ? (i ? 24 : 30) : i ? 28 : 38,
           i ? t.muted : t.fg,
           !i,
         ),

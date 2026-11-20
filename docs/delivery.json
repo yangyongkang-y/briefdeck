@@ -1,0 +1,22 @@
+{
+  "github": "https://github.com/yangyongkang-y/briefdeck",
+  "anna_host": "https://staging.anna.partners",
+  "app_name": "BriefDeck｜简报工坊",
+  "slug": "briefdeck",
+  "qualified_ref": "@yangyongkang-y/briefdeck",
+  "app_id": 289,
+  "version": "0.1.0",
+  "version_id": 706,
+  "bundle_id": 646,
+  "bundle_manifest_sha256": "c72b7e1b5438688a78295fc976a387e2304ba1d14fd0d8a626637a8ec887a1c8",
+  "status": "pending_review",
+  "published": false,
+  "remaining_cu": 992.44,
+  "real_model_requests": 15,
+  "real_consumed_cu": 7.556034482758619,
+  "pending": [
+    "Platform admin review and release",
+    "Platform browser download-dialog verification",
+    "Independent-account installation and isolation verification"
+  ]
+}

@@ -1,6 +1,6 @@
 # Anna staging 与 GitHub 发布手册
 
-当前状态：本地候选版本 0.1.0；GitHub 仓库已发布：https://github.com/yangyongkang-y/briefdeck 。Anna App 尚待开发登录后创建。
+当前状态：0.1.0 已提交审核；GitHub 仓库已发布：https://github.com/yangyongkang-y/briefdeck 。Anna App ID 289 已创建；0.1.0（版本 ID 706，bundle ID 646）已提交审核，状态 pending_review。
 
 ## 账号
 
@@ -53,3 +53,13 @@ npx anna-app apps versions briefdeck --account https://staging.anna.partners
 在已连接的 GitHub 身份下创建公开仓库 `briefdeck`，检查 `.gitignore` 排除 `.anna/`、node_modules、测试运行数据和任何密钥，再推送 main。提交后的构建、测试和 Anna bundle 应对应同一个 commit。
 
 最终交付填写实际 GitHub URL、App name、slug、完整 `@handle/slug`、平台体验链接、发布版本、独立账号测试结果和实际 CU。
+
+
+## 本次执行记录
+
+- 已完成网页登录、CLI 设备确认和用户本人开发者协议激活。密码未写入项目。
+- 草稿 revision 2 与七个静态文件上传成功；bundle 为 ready。
+- 真实测试初始 1000 CU，15 次模型请求后余额 992.44 CU。
+- 已创建不可变 0.1.0，version_id=706，bundle_id=646。
+- submit-review 返回 pending_review；当前不能将此状态称为已公开发布。
+- 管理员批准后执行 `npx anna-app apps release 0.1.0 --account https://staging.anna.partners`，然后验证独立账号安装和下载。
