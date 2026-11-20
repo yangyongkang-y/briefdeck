@@ -1,6 +1,6 @@
 # Anna staging 与 GitHub 发布手册
 
-当前状态：本地候选版本 0.1.0；尚未在 Anna 创建 App，尚未创建 GitHub 远程仓库。
+当前状态：本地候选版本 0.1.0；GitHub 仓库已发布：https://github.com/yangyongkang-y/briefdeck 。Anna App 尚待开发登录后创建。
 
 ## 账号
 

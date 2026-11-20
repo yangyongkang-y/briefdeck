@@ -2,7 +2,7 @@
 
 将主题与工作材料变成可编辑的汇报 PPT。先确认大纲，再分批生成内容；预览、修改、下载后继续在 PowerPoint 或 WPS 中编辑。
 
-**交付状态：应用已实现，本地和模拟宿主验证已完成；Anna staging 真实模型测试、账号额度核验、审核上架和 GitHub 远程仓库发布尚待账号登录完成。不能将本地 mock 测试视为真实平台测试。**
+**交付状态：应用已实现，本地和模拟宿主验证已完成；Anna staging 真实模型测试、账号额度核验、审核上架尚待账号登录完成；GitHub 远程仓库已发布。不能将本地 mock 测试视为真实平台测试。**
 
 | 信息 | 当前值 |
 | --- | --- |
@@ -10,7 +10,7 @@
 | slug | `briefdeck`（待平台创建确认） |
 | 版本 | `0.1.0` |
 | 平台 | https://staging.anna.partners |
-| GitHub | 尚未创建远程仓库 |
+| GitHub | https://github.com/yangyongkang-y/briefdeck |
 | 开发测试实际 CU | 尚无真实模型请求；账号余额未核验 |
 
 ![BriefDeck 编辑器（可编辑演示样例）](docs/screenshots/editor.png)

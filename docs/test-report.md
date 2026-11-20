@@ -41,6 +41,6 @@
 | 独立账号安装与数据隔离 | 待公开版本 |
 | Windows PowerPoint / WPS 人工检查 | 未执行 |
 | Anna 管理员审核与 PUBLISHED 状态 | 尚未提交 |
-| GitHub 远程仓库、远程 CI | 尚未发布，当前仅有本地 Git 仓库 |
+| GitHub 远程仓库、远程 CI | 已发布公开仓库，远程 HEAD 与本地初始提交一致；远程 CI 结果待核验 |
 
 模拟宿主测试不是平台真实测试，LibreOffice 验证不等于所有 PowerPoint/WPS 环境兼容。发布完成后应补充实际版本、commit、平台链接、模型、费用和真实截图。
