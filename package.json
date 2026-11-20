@@ -1,0 +1,40 @@
+{
+  "name": "briefdeck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "anna:dev": "anna-app dev --no-llm --slug briefdeck",
+    "anna:mock": "anna-app dev --mock-llm fixtures/replies.jsonl --slug briefdeck",
+    "anna:real": "anna-app dev --llm-account https://staging.anna.partners --llm-app-slug briefdeck --storage aps --slug briefdeck",
+    "anna:validate": "anna-app validate --strict"
+  },
+  "dependencies": {
+    "@anna-ai/app-runtime": "0.28.0",
+    "lucide-react": "^0.468.0",
+    "pptxgenjs": "4.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.6.7"
+  },
+  "overrides": {
+    "image-size": "2.1.0"
+  },
+  "devDependencies": {
+    "@anna-ai/cli": "0.1.64",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jszip": "^3.10.1",
+    "typescript": "~5.7.3",
+    "vite": "^6.4.6",
+    "vitest": "^5.1.1"
+  }
+}

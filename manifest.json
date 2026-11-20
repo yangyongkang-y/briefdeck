@@ -1,0 +1,25 @@
+{
+  "schema": 4,
+  "required_executas": [],
+  "optional_executas": [],
+  "system_prompt_addendum": "BriefDeck 是制作可编辑汇报 PPT 的应用。当用户提及本应用并希望制作或编辑演示文稿时，请打开本应用的 main 视图，将主题和参考材料作为 payload 传入（topic、material 字段）。仅预填输入，不自动生成；用户在应用中点击生成后才使用额度。",
+  "ui": {
+    "bundle": {
+      "format": "static-spa",
+      "entry": "index.html",
+      "external_origins": []
+    },
+    "views": [
+      {
+        "name": "main",
+        "title": "BriefDeck｜简报工坊",
+        "default": true,
+        "min_size": { "w": 360, "h": 480 },
+        "default_size": { "w": 1200, "h": 760 },
+        "max_size": { "w": 1920, "h": 1200 },
+        "single_instance": true
+      }
+    ],
+    "form_factors": ["desktop"]
+  }
+}

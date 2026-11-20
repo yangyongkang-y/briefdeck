@@ -1,0 +1,2 @@
+at,operation,model,input_tokens,output_tokens,cu,elapsed_ms,status,notes
+2026-11-20,development,offline-fixtures,0,0,0,,offline_only,"尚未登录 Anna，无真实模型调用；平台初始余额未核验"

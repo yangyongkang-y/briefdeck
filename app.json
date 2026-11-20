@@ -1,0 +1,9 @@
+{
+  "name": "BriefDeck｜简报工坊",
+  "slug": "briefdeck",
+  "category": "productivity",
+  "version": "0.1.0",
+  "logo_file": "public/brand-mark.png",
+  "tagline": "把工作材料，变成清晰出彩的演示。",
+  "description": "使用 Anna AI 从主题和工作材料生成汇报大纲与幻灯片。先确认大纲，再分批生成页面；支持六种版式、三种主题、手动编辑、单页 AI 改写、讲稿、项目恢复与可编辑 PPTX 导出。支持中文与英文、6～12页。AI 调用使用当前 Anna 用户的额度。"
+}

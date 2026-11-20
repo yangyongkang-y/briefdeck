@@ -1,0 +1,175 @@
+{
+  "outline": [
+    {
+      "id": "s1",
+      "title": "让第一次体验，成为留下的理由",
+      "layout": "cover",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s2",
+      "title": "先让用户感受到价值",
+      "layout": "big-point",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s3",
+      "title": "三个阻力，打断了体验",
+      "layout": "bullets",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s4",
+      "title": "从完成流程，到创造体验",
+      "layout": "two-column",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s5",
+      "title": "用证据评估改版效果",
+      "layout": "bullets",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s6",
+      "title": "四周，把方向变成结果",
+      "layout": "timeline",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s7",
+      "title": "让每一步都有明确负责人",
+      "layout": "bullets",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    },
+    {
+      "id": "s8",
+      "title": "从一个更好的开始出发",
+      "layout": "big-point",
+      "purpose": "说明问题并提出下一步行动",
+      "sourceIds": []
+    }
+  ],
+  "slides": [
+    {
+      "id": "s1",
+      "layout": "cover",
+      "title": "让第一次体验，成为留下的理由",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s2",
+      "layout": "big-point",
+      "title": "先让用户感受到价值",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s3",
+      "layout": "bullets",
+      "title": "三个阻力，打断了体验",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s4",
+      "layout": "two-column",
+      "title": "从完成流程，到创造体验",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s5",
+      "layout": "bullets",
+      "title": "用证据评估改版效果",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s6",
+      "layout": "timeline",
+      "title": "四周，把方向变成结果",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "需求验证｜确认目标",
+        "原型设计｜梳理路径",
+        "小范围试点｜收集反馈",
+        "效果评估｜明确下一步"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s7",
+      "layout": "bullets",
+      "title": "让每一步都有明确负责人",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    },
+    {
+      "id": "s8",
+      "layout": "big-point",
+      "title": "从一个更好的开始出发",
+      "subtitle": "本地固定样例 · 不代表 AI 生成",
+      "body": [
+        "明确本页的核心观点",
+        "结合材料说明判断依据",
+        "给出清晰的下一步行动"
+      ],
+      "notes": "这是固定的离线测试样例，正式汇报前请替换为已核实的项目材料。",
+      "sourceIds": [],
+      "locked": false
+    }
+  ]
+}
